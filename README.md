@@ -11,6 +11,19 @@ This script is an update to the work of [TomNomNom and fff](https://github.com/t
 - **Output Directory**: Saves the retrieved data into a specified directory structure.
 - **SSL Verification Skipped**: Makes requests even if SSL certificates are invalid or missing.
 
+## 🛠️ pbfff --help
+```
+Usage of pbfff:
+  -b    Only download body
+  -f string
+        File containing URLs, one per line (optional, will use STDIN if not provided)
+  -h    Only download headers
+  -n int
+        Number of parallel jobs to run (default is 4) (default 4)
+  -o string
+        Output directory for saved files (default "output")
+```
+
 ## 🛠️ Requirements
 - Go 1.18 or higher
 
@@ -67,7 +80,7 @@ output/
 ```
 ## ⚙️ How It Works
 Public IP Fetching: The script fetches the public IP of the machine running the script from an external service (https://api.ipify.org)
-Header and Body Fetching: Depending on the flags passed (<span>)(-h or -b)(</span>) it fetches either the HTTP headers or the body (or both) for each URL
+Header and Body Fetching: Depending on the flags passed (-h or -b) it fetches either the HTTP headers or the body (or both) for each URL
 Parallel Processing: The script uses Goroutines to process multiple URLs concurrently, speeding up the fetching process
 For each URL, a directory is created under the specified output directory. The HTTP headers and/or body content are saved as header.txt and body.txt inside the respective directories.
 
