@@ -66,10 +66,10 @@ output/
 │   ├── body.txt
 ```
 ## ⚙️ How It Works
-Public IP Fetching: The script fetches the public IP of the machine running the script from an external service (https://api.ipify.org).
-Header and Body Fetching: Depending on the flags passed (-h or -b), it fetches either the HTTP headers or the body (or both) for each URL.
-Parallel Processing: The script uses Goroutines to process multiple URLs concurrently, speeding up the fetching process.
-Directory Structure: For each URL, a directory is created under the specified output directory. The HTTP headers and/or body content are saved as header.txt and body.txt inside the respective directories.
+Public IP Fetching: The script fetches the public IP of the machine running the script from an external service (https://api.ipify.org).(`<br>`)
+Header and Body Fetching: Depending on the flags passed (-h or -b), it fetches either the HTTP headers or the body (or both) for each URL.(`<br>`)
+Parallel Processing: The script uses Goroutines to process multiple URLs concurrently, speeding up the fetching process.(`<br>`)
+For each URL, a directory is created under the specified output directory. The HTTP headers and/or body content are saved as header.txt and body.txt inside the respective directories.
 
 
 ### 💡 Helpful Notes
